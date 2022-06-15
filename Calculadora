@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#Soma{
+			background-color: #FF69B4;
+			width: 191px;
+			height: 120px;
+		}
+
+		#Subtrair{
+			background-color: #FF69B4;
+			width: 191px;
+			height: 120px;
+		}
+
+		#Multiplicar{
+			background-color: #FF69B4;
+			width: 191px;
+			height: 120px
+		}
+
+		#Dividir{
+			background-color: #FF69B4;
+			width: 191px;
+			height: 120px;
+		}
+
+		#n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8{
+           margin-left: 10px
+		}
+        
+        #operacaoSoma, #operacaoSubtrair{
+          margin-left: 10px
+        }
+
+        #operacaoMultiplicar, #operacaoDividir{
+          margin-left: 10px
+        }
+
+        #h1{
+        	font-family: 'Crimson Text', serif;
+        }
+
+
+	</style>
+
+	<script>
+		function soma() {
+
+			primeiroValor = document.getElementById('n1').value
+
+			segundoValor = document.getElementById('n2').value
+
+			result = Number(primeiroValor) + Number(segundoValor)
+            
+          document.getElementById('resultado').innerHTML = result
+		}
+
+		function subtrair() {
+
+			primeiroValor2 = document.getElementById('n3').value
+
+			segundoValor2 = document.getElementById('n4').value
+
+			result = Number(primeiroValor2) - Number(segundoValor2)
+            
+
+            document.getElementById('resultado2').innerHTML = result
+		}
+
+		function multiplicar() {
+
+			primeiroValor3 = document.getElementById('n5').value
+
+			segundoValor3 = document.getElementById('n6').value
+
+			result = Number(primeiroValor3) * Number(segundoValor3)
+            
+
+            document.getElementById('resultado3').innerHTML = result
+		}
+
+		function dividir() {
+
+			primeiroValor4 = document.getElementById('n7').value
+
+			segundoValor4 = document.getElementById('n8').value
+
+			result = Number(primeiroValor4) / Number(segundoValor4)
+            
+
+            document.getElementById('resultado4').innerHTML = result
+		}
+      
+      function limpar(){
+      	document.getElementById('n1').value =' '
+      	document.getElementById('n2').value =' '
+      	document.getElementById('n3').value =' '
+      	document.getElementById('n4').value =' '
+      	document.getElementById('n5').value =' '
+      	document.getElementById('n6').value =' '
+      	document.getElementById('n7').value =' '
+      	document.getElementById('n8').value =' '
+      	document.getElementById('resultado').innerHTML = ' '
+      	document.getElementById('resultado2').innerHTML = ' '
+      	document.getElementById('resultado3').innerHTML = ' '
+      	document.getElementById('resultado4').innerHTML = ' '
+      }
+	</script>
+</head>
+  <body>
+       <h1>Calculadora</h1>
+
+       <input type="button" value="Limpar" onclick="limpar()" id="Limpar" />
+
+     <div id="Principal">
+
+    <div id="Soma">
+
+       <h3 id="nome">Soma:</h3>
+
+       <input type="number" id='n1'>
+       <br>
+       <input type="number" id='n2'>
+
+       <input type="button" value="+" onclick="soma()" id="operacaoSoma" />
+       
+       O Resultado é: <span id="resultado"></span>
+
+    </div>
+
+       <br>
+
+    <div id="Subtrair">
+    	
+       <h3 id="nome">Subtrair:</h3>
+
+       <input type="number" id='n3'>
+       <br>
+       <input type="number" id='n4'>
+
+       <input type="button" value="-" onclick="subtrair()" id="operacaoSubtrair" />
+
+       O Resultado é: <span id="resultado2"></span>
+
+    </div>
+
+       <br>
+
+    <div id="Multiplicar">
+    	
+       <h3 id="nome">Multiplicar:</h3>
+
+       <input type="number" id='n5'>
+       <br>
+       <input type="number" id='n6'>
+
+       <input type="button" value="*" onclick="multiplicar()" id="operacaoMultiplicar" />
+
+       O Resultado é: <span id="resultado3"></span>
+
+    </div>
+
+       <br>
+
+    <div id="Dividir">
+    	
+       <h3 id="nome">Dividir:</h3>
+
+       <input type="number" id='n7'>
+       <br>
+       <input type="number" id='n8'>
+
+       <input type="button" value="/" onclick="dividir()" id="operacaoDividir" />
+
+       O Resultado é: <span id="resultado4"></span>
+
+    </div>
+
+ </div>
+
+  </body>
+</html>
